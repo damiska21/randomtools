@@ -8,3 +8,13 @@ C:\Users\Damiska\source\repos\random tools\random tools\obj\Debug\random tools.c
 C:\Users\Damiska\source\repos\random tools\random tools\obj\Debug\random tools.csproj.CoreCompileInputs.cache
 C:\Users\Damiska\source\repos\random tools\random tools\obj\Debug\random tools.exe
 C:\Users\Damiska\source\repos\random tools\random tools\obj\Debug\random tools.pdb
+D:\programko\h\randomtools\random tools\bin\Debug\random tools.exe.config
+D:\programko\h\randomtools\random tools\bin\Debug\random tools.exe
+D:\programko\h\randomtools\random tools\bin\Debug\random tools.pdb
+D:\programko\h\randomtools\random tools\obj\Debug\random tools.csproj.AssemblyReference.cache
+D:\programko\h\randomtools\random tools\obj\Debug\random_tools.Form1.resources
+D:\programko\h\randomtools\random tools\obj\Debug\random_tools.Properties.Resources.resources
+D:\programko\h\randomtools\random tools\obj\Debug\random tools.csproj.GenerateResource.cache
+D:\programko\h\randomtools\random tools\obj\Debug\random tools.csproj.CoreCompileInputs.cache
+D:\programko\h\randomtools\random tools\obj\Debug\random tools.exe
+D:\programko\h\randomtools\random tools\obj\Debug\random tools.pdb
