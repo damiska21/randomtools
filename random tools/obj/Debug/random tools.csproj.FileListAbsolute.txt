@@ -18,3 +18,5 @@ D:\programko\h\randomtools\random tools\obj\Debug\random tools.csproj.GenerateRe
 D:\programko\h\randomtools\random tools\obj\Debug\random tools.csproj.CoreCompileInputs.cache
 D:\programko\h\randomtools\random tools\obj\Debug\random tools.exe
 D:\programko\h\randomtools\random tools\obj\Debug\random tools.pdb
+D:\programko\h\randomtools\random tools\bin\Debug\NonInvasiveKeyboardHookLibrary.dll
+D:\programko\h\randomtools\random tools\obj\Debug\random tools.csproj.CopyComplete

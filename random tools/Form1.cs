@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NonInvasiveKeyboardHookLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,18 +18,29 @@ namespace random_tools
         {
             InitializeComponent();
         }
+
+        //tohle je NuGet knihovna, nikoliv funkce uvnitř normálního c#
+        //http://www.kbdedit.com/manual/low_level_vk_list.html kódy na klávesy
+        //https://www.codeproject.com/Articles/1273010/Global-Hotkeys-within-Desktop-Applications ukázky kódu
+        public KeyboardHookManager keyboardHookManager = new KeyboardHookManager();
+        public bool keyboardHookManagerRun = true;
+
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            keyboardHookManager.Start();
+            //F6 - F10 nedělají prakticky nic
+            keyboardHookManager.RegisterHotkey(0x75/*F6*/, () =>
+            {
+                
+            });
         }
-
+        
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             this.Show();
             notifyIcon1.Visible = false;
             WindowState = FormWindowState.Normal;
         }
-
         private void Form1_Resize(object sender, EventArgs e)
         {
             if (WindowState == FormWindowState.Minimized)
@@ -41,6 +53,8 @@ namespace random_tools
                 notifyIcon1.Visible=false;
             }
         }
+
+        #region autoclicker
         [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
         public static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint cButtons, uint dwExtraInfo);
         //Mouse actions
@@ -68,7 +82,6 @@ namespace random_tools
                     timer1.Interval = tick;
                     timer1.Enabled = true;
                 }
-                
             }
             clickerOn = !clickerOn;
         }
@@ -77,6 +90,19 @@ namespace random_tools
         {
             DoMouseClick();
         }
+        #endregion
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (keyboardHookManagerRun)
+            {
+                keyboardHookManager.Stop();
+            }
+            else
+            {
+                keyboardHookManager.Start();
+            }
+            keyboardHookManagerRun = !keyboardHookManagerRun;
+        }
     }
 }
